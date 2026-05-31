@@ -5,7 +5,7 @@ My beginner recipe book project
 
 A beginner-friendly recipe page built with pure HTML, CSS, and JavaScript — no frameworks, no installations, just open and run!
 
-🌐 **Live Demo:** [your-username.github.io/recipe-page](https://your-username.github.io/recipe-page)
+🌐 **Live Demo:** https://nancy-sabu23.github.io/recipe-page/
 
 ---
 
@@ -87,7 +87,7 @@ Save the file and refresh your browser — the new recipe card appears automatic
 ## 👩‍💻 Author
 
 Made with ❤️ by **Nancy**  
-🔗 [github.com/your-username](https://github.com/your-username)
+🔗 https://github.com/Nancy-Sabu23
 
 ---
 
