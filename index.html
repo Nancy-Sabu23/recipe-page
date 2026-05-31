@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Recipe Book</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Homemade with love</p>
+      <h1 class="hero-title">My Recipe<br/><em>Book</em></h1>
+      <p class="hero-sub">A collection of favourite recipes — from quick weekday meals to weekend treats.</p>
+    </div>
+    <div class="hero-deco" aria-hidden="true">
+      <span class="deco-circle c1"></span>
+      <span class="deco-circle c2"></span>
+      <span class="deco-circle c3"></span>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- SEARCH & FILTERS -->
+    <section class="controls">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search recipes…" oninput="filterRecipes()" />
+      </div>
+      <div class="filter-row" id="filterRow"></div>
+    </section>
+
+    <!-- RECIPE COUNT -->
+    <p class="results-count" id="resultsCount"></p>
+
+    <!-- RECIPE CARDS GRID -->
+    <section class="cards-grid" id="cardsGrid" aria-label="Recipe cards"></section>
+
+    <!-- EMPTY STATE -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <span class="empty-emoji">🍽️</span>
+      <p>No recipes found.</p>
+      <small>Try a different search or category.</small>
+    </div>
+
+  </main>
+
+  <!-- DETAIL MODAL OVERLAY -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle" onclick="handleOverlayClick(event)">
+    <div class="modal" id="modal">
+      <button class="modal-close" onclick="closeDetail()" aria-label="Close recipe">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="18" height="18" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <div class="modal-emoji" id="modalEmoji"></div>
+      <div class="modal-tag" id="modalTag"></div>
+      <h2 class="modal-title" id="modalTitle"></h2>
+      <p class="modal-desc" id="modalDesc"></p>
+
+      <div class="modal-chips" id="modalChips"></div>
+
+      <div class="modal-columns">
+        <div class="modal-section">
+          <h3 class="section-heading">Ingredients</h3>
+          <ul class="ing-list" id="modalIngredients"></ul>
+        </div>
+        <div class="modal-section">
+          <h3 class="section-heading">Steps</h3>
+          <ol class="step-list" id="modalSteps"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Made with ❤️ &amp; lots of taste testing</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
